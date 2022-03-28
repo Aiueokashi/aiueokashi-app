@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container">
+    <div class="container" ontouchstart="">
     <div v-for="card in cards" :key="card.number" class="card">
        <div class="face face1">
          <div class="content">
