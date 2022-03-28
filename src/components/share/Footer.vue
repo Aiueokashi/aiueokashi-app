@@ -1,9 +1,7 @@
 <template>
-  <footer>
-    <div>
-      
+    <div class="footer">
+      <p>footer</p>
     </div>
-  </footer>
 </template>
 
 <script>
@@ -20,9 +18,14 @@ export default {
 </script>
 
 <style scoped>
-footer {
-  position: absolute;
-  background: #5c5858;
+.footer {
+  position: relative;
   bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  height: 50px;
+  display: grid;
 }
 </style>

@@ -16,13 +16,24 @@ export default {
 
 <style scoped>
 header {
+  position: sticky;
+  top: 0;
   padding: 1em 0;
   height: 70px;
-  background: #37383a;
   box-shadow: inset 0 0 60px whitesmoke,
-    0 0 50px rgb(177, 176, 176),
-    -10px 0 80px rgb(255, 0, 255),
-    10px 0 80px rgb(0, 255, 255);
+    inset 20px 0 80px rgba(255, 0, 255, 0.3),
+    inset -20px 0 80px rgba(0, 255, 255, 0.3),
+    inset 20px 0 300px rgba(255, 0, 255, 0.3),
+    inset -20px 0 300px rgba(0, 255, 255, 0.3),
+    0 0 50px rgba(255, 255, 255, 0.5),
+    -10px 0 80px rgba(255, 0, 255, 0.5),
+    10px 0 80px rgba(0, 255, 255, 0.5);
+  mask: linear-gradient(black 70px, transparent);
+  -webkit-mask: linear-gradient(black 70px, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1;
+  touch-action: none;
 }
 a {
   text-decoration: none;
@@ -32,7 +43,7 @@ router-link {
   color: none;
 }
   .neonText {
-    color: rgb(242, 248, 248);
+    color: rgb(34, 34, 34);
     text-shadow:
       0 0 7px #fff,
       0 0 10px #fff,

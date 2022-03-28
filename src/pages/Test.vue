@@ -1,9 +1,14 @@
 <template>
   <main>
-    <youtube :video-id="videoId" ref="youtube" @playing="playingVideo"></youtube>
+    <youtube :video-id="videoId" ref="youtube" @playing="playingVideo" :playerVars="playerVars"></youtube>
     <div>
       <button @click="pauseVideo" v-if="playing">pause</button>
       <button @click="playVideo" v-else>play</button>
+    </div>
+    <div>
+        <h1>
+            あああ
+        </h1>
     </div>
   </main>
 </template>
@@ -13,7 +18,14 @@ export default {
         data(){
             return{
                 videoId: '-HBjrIq821s',
-                playing: false,
+                playing: true,
+                playerVars:{
+                    autoplay: 0,
+                    color: 'red',
+                    controls: 0,
+                    disablekb: 0,
+                    iv_load_policy: 3,
+                }
             }
         },
         methods:{
@@ -38,5 +50,7 @@ export default {
 </script>
 
 <style scoped>
-
+h1{
+    font-size: 500px
+}
 </style>
