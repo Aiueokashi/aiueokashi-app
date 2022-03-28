@@ -39,7 +39,7 @@ export default {
           icon:"logo-github",
           insite: false,
           link: "https://github.com/Aiueokashi",
-          linkmsg: "Visit"
+          linkmsg: "Visit Github"
       },{
           number:3,
           title: "ColorfulDuck",
@@ -47,8 +47,17 @@ export default {
           icon: "game-controller",
           insite: false,
           link: "https://colorful-duck.netlify.app/",
-          linkmsg: "Go to DUCK",
+          linkmsg: "Visit DUCK",
           image: "https://cdn.discordapp.com/attachments/934834607415754755/935217662403964968/1318_20220125020046.png"
+      },{
+          number:4,
+          title: "テスト",
+          description: "テスト用のページです。",
+          icon: "construct",
+          insite: true,
+          link: "/test",
+          linkmsg: "Go to DUCK",
+          image: ""
       }]
     }
   }

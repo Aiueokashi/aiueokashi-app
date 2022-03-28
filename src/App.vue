@@ -26,6 +26,7 @@ body {
   -khtml-user-select: none;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
+  touch-action: manipulation;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
