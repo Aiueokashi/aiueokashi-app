@@ -88,7 +88,7 @@ body{
   width: auto;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap:wrap; 
 }
 
