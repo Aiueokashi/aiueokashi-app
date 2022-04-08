@@ -1,15 +1,29 @@
 <template>
   <header>
-    <h1 class="neonText"><router-link to="/" >{{sitename}}</router-link></h1>
+    <svg width="100%" height="100px"  viewBox="-10 -40 1400 100">
+    <text  x="0" y="0" font-size="20px" class="animate"><router-link to="/" >{{name}}</router-link></text>
+    </svg>
   </header>
 </template>
 
 <script>
+import anime from 'animejs';
 export default {
   data () {
     return {
-      sitename: "Aiueokashi"
+      name: "Aiueokashi"
     }
+  },
+  mounted() {
+    anime({
+      targets: '.animate',
+      direction: 'alternate',
+      strokeDashoffset: [anime.setDashoffset, 100],
+      easing: 'easeInOutSine',
+      loop:true,
+      duration: 1500,
+      delay: function(el, i) { return i * 250 },
+    })
   }
 }
 </script>
@@ -42,35 +56,22 @@ a {
 router-link {
   color: none;
 }
-  .neonText {
-    color: rgb(34, 34, 34);
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
-  }
 
 
 /* Additional styling */
-
-h1 {
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+text {
+  font-family: "Sacramento", cursive;
   font-size: 30px;
   text-align: left;
   padding-left: 30px;
-  color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
-  animation: blinker 4s linear infinite;
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  fill: transparent;
+  stroke: #fff6a9;
 }
-
-@keyframes blinker {
-  50% {
-    opacity: 0.2;
-  }
+.animate{
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 100px;
 }
 
 </style>

@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import anime from 'animejs';
 export default {
   data () {
     return {
@@ -60,7 +61,15 @@ export default {
           image: ""
       }]
     }
-  }
+  },
+  mounted() {
+  anime({
+    targets: '.container', // 対象を指定
+    opacity: [0, 1],
+    duration: 3000, // ミリ秒指定
+    easing: 'easeInOutCubic' // 加減速の種類
+  })
+}
 }
 </script>
 
@@ -89,7 +98,7 @@ body{
   position: relative;
   display: flex;
   justify-content: center;
-  flex-wrap:wrap; 
+  flex-wrap:  wrap; 
 }
 
 .container .card{
