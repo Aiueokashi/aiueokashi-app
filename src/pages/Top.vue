@@ -64,10 +64,9 @@ export default {
   },
   mounted() {
   anime({
-    targets: '.container', // 対象を指定
-    opacity: [0, 1],
-    duration: 3000, // ミリ秒指定
-    easing: 'easeInOutCubic' // 加減速の種類
+    targets: '.card',
+    scale: [0.3, 1],
+    easing: 'easeInElastic(2, .6)'
   })
 }
 }
@@ -78,12 +77,11 @@ main {
   height: calc(100vh - 152px);
   padding: 3% 0;
   box-sizing: border-box;
-  display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 100px;
 }
 body{
-  display:flex;
   margin:0;
   padding:0;
   min-height: 100vh;
@@ -98,7 +96,7 @@ body{
   position: relative;
   display: flex;
   justify-content: center;
-  flex-wrap:  wrap; 
+  flex-wrap:  wrap;
 }
 
 .container .card{

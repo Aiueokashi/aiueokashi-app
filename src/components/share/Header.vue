@@ -1,17 +1,19 @@
 <template>
   <header>
     <svg width="100%" height="100px"  viewBox="-10 -40 1400 100">
-    <text  x="0" y="0" font-size="20px" class="animate"><router-link to="/" >{{name}}</router-link></text>
+    <text  x="0" y="0" font-size="30px" class="animate"><router-link to="/" >{{name}}</router-link></text>
     </svg>
   </header>
 </template>
 
 <script>
 import anime from 'animejs';
+import icon from "../../assets/icon.svg";
 export default {
   data () {
     return {
-      name: "Aiueokashi"
+      name: "Aiueokashi",
+      icon: icon
     }
   },
   mounted() {
