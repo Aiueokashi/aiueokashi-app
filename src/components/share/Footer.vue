@@ -1,9 +1,9 @@
 <template>
-    <div class="footer">
+    <footer>
       <div class="wrap">
       <span class="copyright">&copy; -</span><h1> Aiueokashi </h1><span>- 2022</span>
       </div>
-    </div>
+    </footer>
 </template>
 
 <script>
@@ -20,12 +20,12 @@ export default {
 </script>
 
 <style scoped>
-.footer {
+footer {
   position: relative;
   bottom: 0;
   width: 100%;
   background-color: rgb(74, 56, 75);
-  color: white;
+  color: rgb(255, 252, 252);
   text-align: center;
   height: 50px;
   display: grid;

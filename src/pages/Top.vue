@@ -74,21 +74,9 @@ export default {
 
 <style scoped>
 main {
-  height: calc(100vh - 152px);
-  padding: 3% 0;
+  min-height: calc(100vh - 140px);
   box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 100px;
-}
-body{
-  margin:0;
-  padding:0;
-  min-height: 100vh;
-  background: #444;
-  justify-content: center;
-  align-items: center;
-  font-family: arial;
+  padding-bottom: 50px;
 }
 
 .container{
