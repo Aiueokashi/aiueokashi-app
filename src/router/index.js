@@ -2,6 +2,7 @@ import Top from "@/pages/Top";
 import Radius from "@/pages/Radius";
 import Test from "@/pages/Test";
 import NotFound from "@/pages/NotFound";
+import YoutubePlayer from "@/pages/YoutubePlayer";
 import Vue from "vue";
 import Router from "vue-router";
 
@@ -21,6 +22,9 @@ export default new Router({
     },{
       path: "/test",
       component: Test
+    },{
+      path: "/youtube",
+      component: YoutubePlayer
     },{
       path: "*",
       component: NotFound
