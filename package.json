@@ -6,14 +6,27 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "build": "node build/build.js"
+    "start": "npm-run-all --parallel start:app start:server",
+    "start:app": "npm run dev",
+    "start:server": "netlify-lambda serve functions",
+    "build": "npm-run-all --parallel build:**",
+    "build:app": "npm build/build.js",
+    "build:functions": "netlify-lambda build functions",
+    "postinstall": "netlify-lambda install"
   },
   "dependencies": {
+    "aws-serverless-express": "^3.4.0",
     "animejs": "^3.2.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vue-youtube": "^1.4.0"
+    "vue-youtube": "^1.4.0",
+    "express": "^4.17.3",
+    "ytdl-core": "^4.11.0",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0",
+    "body-parser": "^1.20.0",
+    "compression": "^1.7.4",
+    "child-process": "^1.0.2"  
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -33,6 +46,8 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "node-notifier": "^5.1.2",
+    "netlify-lambda": "^2.0.15",
+    "npm-run-all": "^4.1.5",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
     "portfinder": "^1.0.13",
