@@ -5,5 +5,5 @@
 
 [build]
   command = "npm run build"
-  functions = "lambda"
+  functions = "functions-build"
   publish = "dist/"
