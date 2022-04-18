@@ -10,7 +10,7 @@
     "start:app": "npm run dev",
     "start:server": "netlify-lambda serve functions",
     "build": "npm-run-all --parallel build:**",
-    "build:app": "npm build/build.js",
+    "build:app": "node build/build.js",
     "build:functions": "netlify-lambda build functions",
     "postinstall": "netlify-lambda install"
   },
