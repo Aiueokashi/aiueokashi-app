@@ -40,7 +40,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         options: {
-                    presets: ['@babel/preset-env']
+                    presets: ['babel-preset-env']
                 },
         include: [resolve('functions'), resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
