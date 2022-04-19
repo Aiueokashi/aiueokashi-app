@@ -39,6 +39,13 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        options: {
+          babelrc: false,
+          presets: [["@babel/preset-env", {
+            modules: false,
+            useBuiltIns: "usage"
+          }]]
+        },
         include: [resolve('src'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
