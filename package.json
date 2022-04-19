@@ -11,8 +11,7 @@
     "start:server": "netlify-lambda serve functions",
     "build": "npm-run-all --parallel build:**",
     "build:app": "node build/build.js",
-    "build:functions": "netlify-lambda build functions",
-    "postinstall": "netlify-lambda install functions"
+    "build:functions": "netlify-lambda build functions"
   },
   "dependencies": {
     "aws-serverless-express": "^3.4.0",
