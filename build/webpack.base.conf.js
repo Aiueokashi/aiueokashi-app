@@ -34,18 +34,32 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: vueLoaderConfig
+        use: [{
+          loader: 'vue-loader',
+          options: vueLoaderConfig
+        }]
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        options: {
-          babelrc: false,
-          presets: [["@babel/preset-env", {
-            modules: false,
-            useBuiltIns: "usage"
-          }]]
-        },
+        use: [
+                        {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: [
+                                    [
+                                        '@babel/preset-env',
+                                        {
+                                            'modules': 'false',//commonjs,amd,umd,systemjs,auto
+                                            'useBuiltIns': 'usage',
+                                            'targets': '> 0.25%, not dead',
+                                            'corejs': 3
+                                        }
+                                    ]
+                                ]
+                            }
+                        }
+                    ],
         include: [resolve('src'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
