@@ -136,6 +136,15 @@ fs.mkdir(path.resolve(__dirname, './tmp/'), (err) => {
     });
   });
 });
+  
+router.get('/api/test/:youtubeID', (req, res) => {
+  const { youtubeID } = req.params;
+  const fileType = (req.query.fileType || 'mp4');
+
+  const url = `https://www.youtube.com/watch?v=${youtubeId}`;
+  const stream = ytdl(url, { quality: 'highest' });
+  res.download(stream);
+});
 
   router.get('/hello/', function(req, res) {
     res.send('hello world')
