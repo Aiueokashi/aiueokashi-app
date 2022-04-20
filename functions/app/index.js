@@ -98,7 +98,7 @@ fs.mkdir(path.resolve(__dirname, './tmp/'), (err) => {
   
   router.get('/api/youtube/:youtubeId', (req, res) => {
   const { youtubeId } = req.params;
-  const fileType = (req.query.fileType || 'mp4') as 'mp4' | 'mp3';
+  const fileType = (req.query.fileType || 'mp4');
 
   const destFilePath = path.resolve(__dirname, `./tmp/${youtubeId}.mp4`);
 
