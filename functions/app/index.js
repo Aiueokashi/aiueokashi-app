@@ -22,7 +22,7 @@ export default function expressApp(functionName) {
   app.use(express.static(path.resolve(__dirname, 'static')));
 
 // tmpディレクトリを作成する
-fs.mkdir(path.resolve(__dirname, './tmp/'), (err) => {
+fs.mkdir(path.resolve(__dirname, '../tmp/'), (err) => {
   if (err) {
     console.error(err);
   }
@@ -100,7 +100,7 @@ fs.mkdir(path.resolve(__dirname, './tmp/'), (err) => {
   const { youtubeId } = req.params;
   const fileType = (req.query.fileType || 'mp4');
 
-  const destFilePath = path.resolve(__dirname, `./tmp/${youtubeId}.mp4`);
+  const destFilePath = path.resolve(__dirname, `../tmp/${youtubeId}.mp4`);
 
   const url = `https://www.youtube.com/watch?v=${youtubeId}`;
   const stream = ytdl(url, { quality: 'highest' });
@@ -123,7 +123,7 @@ fs.mkdir(path.resolve(__dirname, './tmp/'), (err) => {
 
     // mp3の場合は変換してから返す
     console.log('transform mp4 -> mp3.');
-    const mp3FilePath = path.resolve(__dirname, `./tmp/${youtubeId}.mp3`);
+    const mp3FilePath = path.resolve(__dirname, `../tmp/${youtubeId}.mp3`);
     exec(`ffmpeg -y -i ${destFilePath} ${mp3FilePath}`, (err, stdout, stderr) => {
       if (err) {
         console.error(err);
