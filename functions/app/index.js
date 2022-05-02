@@ -103,7 +103,7 @@ fs.mkdir(path.resolve(__dirname, '../tmp/'), (err) => {
   const destFilePath = path.resolve(__dirname, `../tmp/${youtubeId}.mp4`);
 
   const url = `https://www.youtube.com/watch?v=${youtubeId}`;
-  const stream = ytdl(url);
+  const stream = ytdl(url,{filter: (format) => format.container === 'mp4', highWaterMark: 32 * 1024 * 1024});
 
   stream.pipe(fs.createWriteStream(destFilePath));
 
