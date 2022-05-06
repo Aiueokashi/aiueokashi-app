@@ -12,7 +12,7 @@ export default {
   },
   data: () => ({
     videoURL:
-      "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+      `${process.env.VIDEO_DL_URL}/api/ytdl/qzWSvhXEcy8`,
   }),
   methods: {
     changeVideoPlaying(url) {
