@@ -12,7 +12,7 @@ export default {
   },
   data: () => ({
     videoURL:
-      `${process.env.VIDEO_DL_URL}/api/ytdl/qzWSvhXEcy8`,
+      `${process.env.VIDEO_DL_URL}/api/ytdl/uS8MpqST0y0`,
   }),
   methods: {
     changeVideoPlaying(url) {
