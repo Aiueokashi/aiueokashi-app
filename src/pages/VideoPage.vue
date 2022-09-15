@@ -7,10 +7,6 @@
 <script>
 import VideoPlayer from "../components/VideoPlayer";
 export default {
-  async asyncData({ params }) {
-      const videoID = params.video
-      return { videoID }
-    },
   components: {
     VideoPlayer,
   },
@@ -20,7 +16,7 @@ export default {
       }
     },
     async fetch() {
-      this.videoURL = await fetch(`https://okashi.netlify.app/.netlify/functions/downloader/api/test/{this.videoID}`).then(res =>
+      this.videoURL = await fetch(`https://okashi.netlify.app/.netlify/functions/downloader/api/test/${$route.params.id}`).then(res =>
         res.json()
       )
     }
