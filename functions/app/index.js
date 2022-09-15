@@ -137,13 +137,19 @@ fs.mkdir(path.resolve(__dirname, '../tmp/'), (err) => {
   });
 });
   
-router.get('/api/test/:youtubeID', async (req, res) => {
+router.get('/api/test/:youtubeID', (req, res) => {
   const { youtubeID } = req.params;
   const fileType = (req.query.fileType || 'mp4');
 
   const url = `https://www.youtube.com/watch?v=${youtubeId}`;
-  const stdout = await exec(`ytdl --print-url ${url}`);
-  res.send(stdout);
+  exec(`ytdl --print-url ${url}`, (err, stdout, stderr) => {
+    if (err) {
+      res.send(`${stderr}`)
+      return
+    }
+    
+    res.send(`stdout`)
+  })
 });
 
   router.get('/hello/', function(req, res) {
