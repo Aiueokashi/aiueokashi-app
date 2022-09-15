@@ -7,6 +7,7 @@
 
 <script>
 import VideoPlayer from "../components/VideoPlayer";
+import axios from "axios";
 export default {
   components: {
     VideoPlayer,
