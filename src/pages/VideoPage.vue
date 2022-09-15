@@ -1,6 +1,7 @@
 <template>
   <main>
-    <video-player :videoURL="videoURL" />
+  <div v-if="loading" class="loading">Loading...</div>
+    <video-player :videoURL="video" />
   </main>
 </template>
 
@@ -12,17 +13,30 @@ export default {
   },
   data() {
       return {
-        videoURL:"",
+        loading: false,
+        video: null,
+        error: null,
       }
     },
-    async fetch() {
-      this.videoURL = await fetch(`https://okashi.netlify.app/.netlify/functions/downloader/api/test/${$route.params.id}`).then(res =>
-        res.json()
-      )
-    }
+    created() {
+    this.$watch(
+      () => this.$route.params,
+      () => {
+        this.fetchData()
+      },
+      { immediate: true }
+    )
+  },
   methods: {
-    changeVideoPlaying(url) {
-      this.videoURL = url;
+    fetchData() {
+      this.error = this.video = null
+      this.loading = true
+      axios.get(`https://okashi.netlify.app/.netlify/functions/downloader/api/test/${this.$route.params.id}`).then(res => {
+        this.loading = false     
+          this.video = res.data
+      }).catch(err => {
+      this.err = err.String()
+      })
     },
   },
 };
