@@ -140,15 +140,16 @@ fs.mkdir(path.resolve(__dirname, '../tmp/'), (err) => {
 router.get('/api/test/:youtubeID', (req, res) => {
   const { youtubeID } = req.params;
   const fileType = (req.query.fileType || 'mp4');
-
-  const url = `https://www.youtube.com/watch?v=${youtubeID}`;
-  exec(`ytdl --print-url ${url}`, (err, stdout, stderr) => {
+  let base = "npm run ytdl ";
+  let ID = `-yturl='${youtubeID}'`
+  exec(base+ID, (err, stdout, stderr) => {
     if (err) {
       res.send(`${stderr}`)
       return
     }
+    let arr = stdout.split('npm_config_yturl');
     
-    res.send(`stdout`)
+    res.send(`${arr[1]}`)
   })
 });
 
