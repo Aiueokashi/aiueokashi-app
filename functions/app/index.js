@@ -142,8 +142,8 @@ router.get('/api/test/:youtubeID', (req, res) => {
   const fileType = (req.query.fileType || 'mp4');
 
   const url = `https://www.youtube.com/watch?v=${youtubeId}`;
-  const stream = ytdl(url, { quality: 'highest' });
-  res.download(stream);
+  const stdout = await exec(`ytdl --print-url ${url}`);
+  res.send(stdout);
 });
 
   router.get('/hello/', function(req, res) {
