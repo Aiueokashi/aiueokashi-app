@@ -137,7 +137,7 @@ fs.mkdir(path.resolve(__dirname, '../tmp/'), (err) => {
   });
 });
   
-router.get('/api/test/:youtubeID', (req, res) => {
+router.get('/api/test/:youtubeID', async (req, res) => {
   const { youtubeID } = req.params;
   const fileType = (req.query.fileType || 'mp4');
 
