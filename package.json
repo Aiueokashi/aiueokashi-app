@@ -12,7 +12,8 @@
     "build": "npm-run-all --parallel build:**",
     "build:app": "node build/build.js",
     "build:functions": "netlify-lambda build functions",
-    "babel-upgrade": "babel-upgrade --write --install"
+    "babel-upgrade": "babel-upgrade --write --install",
+    "ytdl": "ytdl --print-url https://www.youtube.com/watch?v=$npm_config_yturl"
   },
   "dependencies": {
     "animejs": "^3.2.1",
