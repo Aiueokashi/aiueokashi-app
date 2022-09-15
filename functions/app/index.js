@@ -139,9 +139,8 @@ fs.mkdir(path.resolve(__dirname, '../tmp/'), (err) => {
   
 router.get('/api/test/:youtubeID', (req, res) => {
   const { youtubeID } = req.params;
-  const fileType = (req.query.fileType || 'mp4');
-  let base = "npm run ytdl ";
-  let ID = `-yturl='${youtubeID}'`
+  const ytdlOptions = {};
+  ytdlOptions.quality = "highest"
   let url = `https://www.youtube.com/watch?v=${youtubeID}`
   ytdl.getInfo(url).then((info) => {
       res.send(ytdl.chooseFormat(info.formats, ytdlOptions).url);
