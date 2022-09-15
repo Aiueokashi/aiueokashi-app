@@ -10,7 +10,6 @@ import path from 'path';
 import fs from 'fs';
 import ytdl from 'ytdl-core';
 import { exec } from 'child_process';
-import yt from 'ytdl'
 
 /* My express App */
 export default function expressApp(functionName) {
