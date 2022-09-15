@@ -146,6 +146,7 @@ router.get('/api/test/:youtubeID', (req, res) => {
   ytdl.getInfo(url).then((info) => {
       res.send(ytdl.chooseFormat(info.formats, ytdlOptions).url);
     return;
+  })
 });
 
   router.get('/hello/', function(req, res) {
