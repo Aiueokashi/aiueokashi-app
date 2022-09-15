@@ -5,14 +5,14 @@
   <div class="search" :class="{ open: isOpen }">
       <input
         v-model="message"
-        type="search"
+        type="text"
         class="search-box"
         v-bind:value="url"
         v-on:input="hoge"
       />
-      <span v-on:click="clicked()" class="search-button">
-        <span class="search-icon"></span>
-      </span>
+      <button type="button" v-on:click="clicked()" class="search-button">
+        download
+      </button>
     </div>
    </div>
   <div v-if="videoready">
@@ -57,6 +57,9 @@ export default {
         this.show = true;
         this.fetchData();
         }
+    },
+    hoge: function (e) {
+      this.url = e.target.value;
     },
   },
 };
