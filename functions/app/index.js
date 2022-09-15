@@ -10,6 +10,7 @@ import path from 'path';
 import fs from 'fs';
 import ytdl from 'ytdl-core';
 import { exec } from 'child_process';
+import yt from 'ytdl'
 
 /* My express App */
 export default function expressApp(functionName) {
@@ -142,14 +143,12 @@ router.get('/api/test/:youtubeID', (req, res) => {
   const fileType = (req.query.fileType || 'mp4');
   let base = "npm run ytdl ";
   let ID = `-yturl='${youtubeID}'`
-  exec(base+ID, (err, stdout, stderr) => {
+  exec(`ytdl --print-url https://www.youtube.com/watch?v=${youtubeID}`, (err, stdout, stderr) => {
     if (err) {
       res.send(`${stderr}`)
       return
     }
-    let arr = stdout.split('npm_config_yturl');
-    
-    res.send(`${arr[1]}`)
+    res.send(`${stdout}`)
   })
 });
 
