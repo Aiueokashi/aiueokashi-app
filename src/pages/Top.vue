@@ -31,7 +31,7 @@ export default {
           description: "製作中のプロジェクトです。まあ、ようつべから動画とってくるアレです。",
           icon: "logo-youtube",
           insite: true,
-          link: "/video/a",
+          link: "/video",
           linkmsg: "Go to Youtube Downloader"
       },{
           number:2,
