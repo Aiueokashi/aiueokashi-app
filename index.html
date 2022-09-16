@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>okashi</title>
   </head>
+  <script>
+  document.documentElement.addEventListener('touchstart', function (e) {
+  if (e.touches.length >= 2) {e.preventDefault();}
+  }, {passive: false});
+  var t = 0;
+  document.documentElement.addEventListener('touchend', function (e) {
+  var now = new Date().getTime();
+  if ((now - t) < 350){
+    e.preventDefault();
+  }
+  t = now;
+  }, false);
+</script>
+<style>
+  body , input , textarea , select {
+    font-size:17px;
+  }
+</style>
   <body oncontextmenu="return false">
     <div id="app"></div>
     <!-- built files will be auto injected -->
