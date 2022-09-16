@@ -43,8 +43,8 @@
       <div v-if="showFunctions" class="video__controls__functions">
         <div>
           <button class="video__controls__button" @click.stop="toggleVideoPlay">
-            <v-icon style="color: #fff" v-if="isPlaying">mdi-pause</v-icon>
-            <v-icon style="color: #fff" v-else>mdi-play</v-icon>
+            <v-icon style="color: #fff" v-if="isPlaying"><ion-icon class="pause-icon" name="pause-circle-outline"></ion-icon></v-icon>
+            <v-icon style="color: #fff" v-else><ion-icon class="play-icon" name="play-circle-outline"></ion-icon></v-icon>
           </button>
 
           <div class="video__controls__duration">
@@ -277,6 +277,12 @@ export default {
   --primary-color: #41b883;
   --control-background-color: rgba(45, 45, 45, 0.867);
   --top-options: -145px;
+}
+.play-icon {
+  color: #00ff00;
+}
+.pause-icon {
+  color: #ff0000;
 }
 .video__container {
   display: flex;
