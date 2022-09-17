@@ -1,7 +1,5 @@
 <template>
   <main>
-  <div v-if="loading" class="loading">Loading...</div>
-  <div v-if="!videoready">
   <div class="search" :class="{ open: isOpen }">
       <input
         v-model="message"
@@ -11,10 +9,10 @@
         v-on:input="hoge"
       />
       <button type="button" v-on:click="clicked()" class="search-button">
-        download
+        play
       </button>
-    </div>
-   </div>
+    </div>  
+  <div v-if="loading" class="loading"><vue-simple-spinner size="large" message="loading" line-fg-color="#ff00ff" /></div>
   <div v-if="videoready">
     <video-player :videoURL="video" />
    </div>
@@ -22,11 +20,13 @@
 </template>
 
 <script>
+import Spinner from 'vue-simple-spinner';
 import VideoPlayer from "../components/VideoPlayer";
 import axios from "axios";
 export default {
   components: {
     VideoPlayer,
+    Spinner,
   },
   data() {
       return {
