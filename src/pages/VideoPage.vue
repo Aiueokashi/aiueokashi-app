@@ -43,7 +43,7 @@ export default {
     fetchData() {
       this.error = this.video = null
       this.loading = true
-      let ID = this.url.split("v=")[1] || this.url;
+      let ID = this.url.split("v=")[1];
       axios.get(`https://okashi.netlify.app/.netlify/functions/downloader/api/test/${ID}`).then(res => {
         this.loading = false   
         this.videoready = true
@@ -53,8 +53,9 @@ export default {
       })
     },
     clicked: function () {
-      if (this.url) {
+      if (this.url.includes("youtube.com")) {
         this.show = true;
+        
         this.fetchData();
         }
     },
