@@ -50,6 +50,8 @@ export default {
           this.video = res.data
       }).catch(err => {
       this.err = err.String()
+      this.loading = false
+      this.videoready = false
       })
     },
     clicked: function () {
