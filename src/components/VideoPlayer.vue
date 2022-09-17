@@ -1,7 +1,7 @@
 <template>
   <div
     class="video__container"
-    @click="handleShowFunctions"
+    @click="setTimeoutFunction"
     @mouseover="handleShowFunctions"
     @mouseleave="setTimeoutFunction"
   >
