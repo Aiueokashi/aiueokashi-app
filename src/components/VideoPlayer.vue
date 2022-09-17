@@ -43,8 +43,8 @@
       <div v-if="showFunctions" class="video__controls__functions">
         <div>
           <button class="video__controls__button" @click.stop="toggleVideoPlay">
-            <ion-icon v-if="isPlaying" size="large" class="pause-icon" name="pause-circle-outline"></ion-icon>
-            <ion-icon v-else size="large" class="play-icon" name="play-circle-outline"></ion-icon>
+            <ion-icon v-show="isPlaying" size="large" class="pause-icon" name="pause-circle-outline"></ion-icon>
+            <ion-icon v-show="!isPlaying" size="large" class="play-icon" name="play-circle-outline"></ion-icon>
           </button>
 
           <div class="video__controls__duration">
