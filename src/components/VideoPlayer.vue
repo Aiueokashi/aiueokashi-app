@@ -1,7 +1,7 @@
 <template>
   <div
     class="video__container"
-    @click="setTimeoutFunction"
+    @click="setTimeoutFastFunction"
     @mouseover="handleShowFunctions"
     @mouseleave="setTimeoutFunction"
   >
@@ -268,6 +268,17 @@ export default {
       setTimeout(() => {
         self.showProgressBar = false;
       }, 10000);
+    },
+    setTimeoutFastFunction() {
+      const self = this;
+      setTimeout(() => {
+        self.showFunctions = false;
+        self.speedOpen = false;
+        self.volumeOptionsOpen = false;
+      }, 1000);
+      setTimeout(() => {
+        self.showProgressBar = false;
+      }, 5000);
     },
   },
 };
