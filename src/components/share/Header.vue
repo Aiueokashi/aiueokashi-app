@@ -1,5 +1,5 @@
 <template>
-  <mu-appbar style="width: 100%;" color="primary">
+  <mu-appbar style="width: 100%;">
   <mu-button icon slot="left">
     <mu-icon value="menu"></mu-icon>
   </mu-button>
