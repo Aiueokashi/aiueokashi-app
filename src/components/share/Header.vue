@@ -1,12 +1,12 @@
 <template>
-  <mu-appbar style="width: 100%;">
+  <header>
   <mu-button icon slot="left">
     <mu-icon value="menu"></mu-icon>
   </mu-button>
-  <svg slot="left" width="500%" height="200px"  viewBox="0 -100 500 100">
+  <svg slot="left" width="500%" height="200px"  viewBox="0 -75 500 100">
     <text  x="0" y="0" width="500" height="100" fill="none" class="animate"><router-link to="/" >{{name}}</router-link></text>
    </svg>
-</mu-appbar>
+</header>
 </template>
 
 <script>
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style scoped>
-mu-appbar {
+header {
   position: sticky;
   top: 0;
   padding: 1em 0;
