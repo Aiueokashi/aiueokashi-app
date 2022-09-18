@@ -15,6 +15,11 @@
   <div v-if="loading" class="loading"><spinner size="large" message="loading" line-fg-color="#ff00ff" /></div>
   <div v-if="videoready">
     <video-player :videoURL="video" />
+      <mu-button color="orange">
+      <a :href="video" target="_blank">
+        <mu-icon value="file_download" right></mu-icon>Download!
+        </a>
+      </mu-button>
    </div>
   </main>
 </template>
