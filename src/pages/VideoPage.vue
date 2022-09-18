@@ -2,14 +2,13 @@
   <main>
   <div class="search" :class="{ open: isOpen }">
       <mu-text-field
-        v-model="message"
+        color="white"
+        bg-color="grey"
+        v-model="url"
         type="text"
         label="Youtube URL"
-        class="search-box"
-        v-bind:value="url"
-        v-on:input="hoge"
       />
-      <mu-button color="purple" type="button" v-on:click="clicked()" class="search-button">
+      <mu-button color="blue" type="button" v-on:click="clicked()" class="search-button">
         <mu-icon value="play_circle_filled" right></mu-icon>Play
       </mu-button>
     </div>  
@@ -61,9 +60,6 @@ export default {
         
         this.fetchData();
         }
-    },
-    hoge: function (e) {
-      this.url = e.target.value;
     },
   },
 };
