@@ -1,6 +1,6 @@
 <template>
   <header>
-  <svg slot="left" width="500%" height="200px"  viewBox="0 0 500 100">
+  <svg slot="left" width="100%" height="200px"  viewBox="0 0 500 100">
     <text  x="0" y="0" width="500" height="100" fill="none" class="animate"><router-link to="/" >{{name}}</router-link></text>
    </svg>
 </header>
