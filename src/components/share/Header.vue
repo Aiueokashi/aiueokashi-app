@@ -1,9 +1,6 @@
 <template>
   <header>
-  <mu-button icon slot="left">
-    <mu-icon value="menu"></mu-icon>
-  </mu-button>
-  <svg slot="left" width="500%" height="200px"  viewBox="0 -75 500 100">
+  <svg slot="left" width="500%" height="200px"  viewBox="0 0 500 100">
     <text  x="0" y="0" width="500" height="100" fill="none" class="animate"><router-link to="/" >{{name}}</router-link></text>
    </svg>
 </header>
@@ -53,6 +50,9 @@ header {
   -webkit-backdrop-filter: blur(20px);
   z-index: 1;
   touch-action: none;
+}
+svg {
+  mergin: left-auto;
 }
 a {
   text-decoration: none;
