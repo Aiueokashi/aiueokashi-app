@@ -3,7 +3,7 @@
   <mu-button icon slot="left">
     <mu-icon value="menu"></mu-icon>
   </mu-button>
-  <svg slot="left" width="500%" height="200px"  viewBox="0 -150 500 100">
+  <svg slot="left" width="500%" height="200px"  viewBox="0 -100 500 100">
     <text  x="0" y="0" width="500" height="100" fill="none" class="animate"><router-link to="/" >{{name}}</router-link></text>
    </svg>
 </mu-appbar>
