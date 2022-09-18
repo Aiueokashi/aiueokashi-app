@@ -52,7 +52,7 @@ header {
   touch-action: none;
 }
 svg {
-  mergin: left-auto;
+  margin: right;
 }
 a {
   text-decoration: none;
