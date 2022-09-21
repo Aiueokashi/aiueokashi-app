@@ -1,7 +1,7 @@
 <template>
   <header>
-  <svg slot="left" width="100%" height="100px"  viewBox="0 0 100 100">
-    <text  x="0" y="0" width="100" height="100" fill="none" class="animate"><router-link to="/" >{{name}}</router-link></text>
+  <svg width="25%" height="100px" >
+    <text  x="0" y="20" fill="none" class="animate"><router-link to="/" >{{name}}</router-link></text>
    </svg>
 </header>
 </template>
