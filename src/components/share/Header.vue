@@ -35,6 +35,7 @@ header {
   position: fixed;
   top: 0;
   padding: 1em 0;
+  width: 100%;
   height: 70px;
   box-shadow: inset 0 0 60px whitesmoke,
     inset 20px 0 80px rgba(255, 0, 255, 0.3),
