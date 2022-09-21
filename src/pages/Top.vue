@@ -11,7 +11,7 @@
        <div class="face face2">
          <div class="content">
            <p>{{card.description}}</p>
-           <a v-if="card.insite === false" :href=card.link type="button" target="_blank">{{card.linkmsg}}</a>
+           <a v-if="card.insite === false" class="square" :href=card.link type="button" target="_blank">{{card.linkmsg}}</a>
            <router-link v-if="card.insite === true" :to=card.link>{{card.linkmsg}}</router-link>
          </div>
        </div>
@@ -78,6 +78,10 @@ main {
   box-sizing: border-box;
   padding-bottom: 50px;
   margin-top: 70px;
+}
+
+.square{
+  border-radius: 0;
 }
 
 .container{
