@@ -1,6 +1,6 @@
 <template>
   <header>
-  <svg width="25%" height="100px" >
+  <svg width="25%" height="100px" class="logo" >
     <text  x="0" y="20" fill="none" class="animate"><router-link to="/" >{{name}}</router-link></text>
    </svg>
 </header>
@@ -32,7 +32,7 @@ export default {
 
 <style scoped>
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   padding: 1em 0;
   height: 70px;
@@ -49,11 +49,10 @@ header {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 1;
-  touch-action: none;
-  justify-content: space-between;
+  display: flex;
 }
-svg {
-  margin-right: auto;
+.logo {
+  margin: 5px;
 }
 a {
   text-decoration: none;
