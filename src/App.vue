@@ -39,6 +39,9 @@ body {
   color: #2c3e50;
   background-color: rgb(54, 51, 51);
 }
+router-view {
+  margin-top: 90px;
+}
 .v-enter {
   transform: translate(-100px, 0);
   opacity: 0;
