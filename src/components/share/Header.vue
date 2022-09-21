@@ -50,9 +50,10 @@ header {
   -webkit-backdrop-filter: blur(20px);
   z-index: 1;
   touch-action: none;
+  justify-content: space-between;
 }
 svg {
-  left: 0;
+  margin-right: auto;
 }
 a {
   text-decoration: none;
