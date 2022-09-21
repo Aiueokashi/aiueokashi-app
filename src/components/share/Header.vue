@@ -52,7 +52,7 @@ header {
   touch-action: none;
 }
 svg {
-  position: absolute;
+  left: 0;
 }
 a {
   text-decoration: none;
@@ -67,7 +67,7 @@ router-link {
 @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 text {
   font-family: "Sacramento", cursive;
-  font-size: 30px;
+  font-size: 35px;
   text-align: left;
   padding-left: 30px;
   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
