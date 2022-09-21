@@ -70,6 +70,7 @@ main {
   align-items: center;
   display: grid;
   overflow: hidden;
+  margin-top: 70px;
 }
 .space {
   height: 150px;
