@@ -28,7 +28,7 @@ export default {
       cards: [{
           number:1,
           title: "Youtube Downloader",
-          description: "製作中のプロジェクトです。まあ、ようつべから動画とってくるアレです。",
+          description: "ようつべから動画とってくるアレです。",
           icon: "logo-youtube",
           insite: true,
           link: "/video",
@@ -44,7 +44,7 @@ export default {
       },{
           number:3,
           title: "ColorfulDuck",
-          description: "またまた製作中のプロジェクトです。discordの仲間たちとやってます。",
+          description: "製作中のプロジェクトです。discordの仲間たちとやってます。",
           icon: "game-controller",
           insite: false,
           link: "https://colorful-duck.netlify.app/",
