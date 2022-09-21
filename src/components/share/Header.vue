@@ -32,7 +32,7 @@ export default {
 
 <style scoped>
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   padding: 1em 0;
   height: 70px;
@@ -49,7 +49,6 @@ header {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 1;
-  touch-action: none;
   justify-content: space-between;
 }
 svg {
