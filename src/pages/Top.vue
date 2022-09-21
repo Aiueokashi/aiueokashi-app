@@ -77,6 +77,7 @@ main {
   min-height: calc(100vh - 140px);
   box-sizing: border-box;
   padding-bottom: 50px;
+  margin-top: 90px;
 }
 
 .container{
