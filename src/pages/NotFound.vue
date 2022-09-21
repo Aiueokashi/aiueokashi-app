@@ -26,7 +26,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 90px;
+  margin-top: 70px;
 }
 .neonText {
   animation: flicker 1.5s infinite alternate;

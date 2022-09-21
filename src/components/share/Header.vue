@@ -49,7 +49,7 @@ header {
   -webkit-mask: linear-gradient(black 70px, transparent);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  z-index: 1;
+  z-index: 1001;
   display: flex;
 }
 .logo {
